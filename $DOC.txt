@@ -1,0 +1,41 @@
+﻿ClipMinusOne.ahk defines a hotkey (NumpadSub) that decrements the value in the clipboard by 1 and sends the decremented value as keystrokes to the active window. However, this hotkey will only be active when a TMG is the window in focus.
+Example: You are in a TMG TAG box that excpets a number and the clipboard contains the ID number of child  as 1234 if you press the Numpad Plus key the tag number 1235 will be added to the box
+ 
+
+ClipPlusOne.ahk defines a hotkey (NumpadAdd) that increments  the value in the clipboard by 1 and sends the incremented value as keystrokes to the active window. However, this hotkey will only be active when a TMG is the window in focus.
+Example: You are in a TMG TAG box that excpets a number and the clipboard contains the ID number of child  as 1234 if you press the Numpad Plus key the tag number 1236 will be added to the box
+
+
+CreateFamilySpreadsheet.ahk streamlines the procedure of generating a familial spreadsheet withine TMG. By clicking once on a Tag containing the desired individual as the Principal person in TMG, users can then utilize the predefined hotkey (!z by default) to commence the process of crafting a family spreadsheet. The application anticipates that the TMG Report definition will specify the Report Destination as an Excel file labeled "Family2". Furthermore, it mandates the presence of a TMG Configuration labeled "family" and a Filter Group titled "family of person". A duplicate of this FLP is accessible in this library. Should the application present a "Fill in the blank window" devoid of any supplied values, attempting to select cancel and retrying the hotkey is advisable, as this behavior is recognized as a bug.*
+
+ 
+Deceased.ahk  facilitate the process of marking individuals as deceased within the TMG. When a TMG window is active, pressing the hotkey(Shift + F2) inserts the text ",deceased," into the input box.  
+
+Family pick ID.ahk  facilitate the process of retrieving family IDs from an Excel spreadsheet named "family2.xls". When the "family2.xls" window is active, pressing the hotkey Alt + F1 on any row in the spreadsheet will copy the value from column A (family ID) of that row to the clipboard. This functionality is particularly useful for quickly accessing family IDs for further processing.
+
+Get FocusId .ahk   retrieves the focus ID from  TMG. Pressing the hotkey Alt + I after selecting a Tag initiates the process of obtaining the  ID from the TMG Tag. The focus ID is then copied to the clipboard for further use.  
+
+GetFocusName.ahk  retrieves the full name of the focused person within the TMG when a TMG window is active. Pressing the hotkey Alt + N after selecting a Tag initiates the process of obtaining the full name of the focused person. The full name is then copied to the clipboard for further use.  
+
+RemovePeopleFromFocusGroup.ahk  removes selected individuals from the active TMG Focus Group and save the updated Focus Group. Pressing the Scroll Lock key after selecting person(s) in the Focus group  initiates the process of removing the person(s) and saving the Focus Group. TMG must be active, and the Focus Group must have been saved at least once before running the program so that the Save function knows where to store the updated list.
+
+SearchForSourceCitation.ahk  searches for a source citation in TMG  window with the specified class name is active. Pressing the hotkey Alt + S initiates the search process by sending a sequence of keystrokes: {F4}{F2}{Tab 6}{Enter} 
+
+Replace.ahk  replaces data with the contents of the clipboard. When the hotkey Alt + R is pressed, the script selects all text (Ctrl + A) in the active window and then pastes (Ctrl + V) the content of the clipboard, effectively replacing the selected text with the clipboard contents. 
+
+
+SearchFor1950Census.ahk Searches for 1950 Cenus canadates for focus person in Ancestry.com
+While viewing a person in Ancestry.com if the hotkey (Shift F12) is pressed this script will perform the following step.
+1 Press the “Search” button for the selected Person (Not the Tree Seach nor the Search button in the menu bar.
+2 When the "All Results" screen is presented the script will then select the “Census & Voter list”.
+3 When the "All Census & Voter list" results screen is presented the script will select 1950s.
+
+T2A.ahk is a  designed to facilitate the process of selecting a person in TMG (The Master Genealogist) and navigating to that person in your Ancestry.com tree. Note that T2ASetup.ahk must be run once before using T2A to define the Ancestry tree address(UR) and the hotkey you wish to use. 
+
+T2ASetup.ahk is an used to set up or modify user choices for the Ancestry.com tree, root person, and hotkeys to be used with the T2A script. This script must be run before executing T2A.ahk.
+
+
+ Site Search John Cardinal Genealogy Programs.ahk is  designed to search specific genealogy websites using Google. The script provides checkboxes to select the websites to search (e.g., Second Site, GedSite, TMG 2 GEDCOM, etc.) and allows users to enter a search term. Upon clicking the Search button, the script constructs a Google search URL tailored to the selected websites and search term, opening the default web browser with the search results.
+
+ 
+T2A
